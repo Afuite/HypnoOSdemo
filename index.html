@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HypnoOS v2.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--color-bg)',
+              surface: 'var(--color-surface)',
+              primary: 'var(--color-primary)', 
+              secondary: '#3f3f46', 
+              accent: '#10b981', 
+              danger: '#ef4444',
+              muted: '#71717a', 
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+              sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scan': 'scan 10s linear infinite',
+            },
+            keyframes: {
+              scan: {
+                '0%': { transform: 'translateY(100%)' },
+                '100%': { transform: 'translateY(-100%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        --color-primary: #06b6d4;
+        
+        /* Light Mode Defaults - High Contrast */
+        --color-bg: #f0f2f5;
+        --color-surface: #ffffff;
+        
+        --bg-glass: rgba(255, 255, 255, 0.9);
+        --border-glass: rgba(0, 0, 0, 0.15);
+        --text-glass: #18181b;
+        --text-muted: #52525b;
+      }
+      
+      .dark {
+        /* Dark Mode Defaults */
+        --color-bg: #050505;
+        --color-surface: #121212;
+        
+        --bg-glass: rgba(18, 18, 18, 0.6);
+        --border-glass: rgba(255, 255, 255, 0.08);
+        --text-glass: #e4e4e7;
+        --text-muted: #a1a1aa;
+      }
+
+      body {
+        background-color: var(--color-bg);
+        color: var(--text-glass);
+        font-family: 'Inter', system-ui, sans-serif;
+        overflow: hidden;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a1a1aa;
+        border-radius: 2px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #52525b;
+      }
+
+      .glass-panel {
+        background: var(--bg-glass);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--border-glass);
+        color: var(--text-glass);
+        transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+      }
+      
+      input, textarea, select, button {
+        color: var(--text-glass);
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-BUunG1fb.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
